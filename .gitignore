@@ -216,3 +216,20 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Python / uv
+.venv/
+__pycache__/
+*.pyc
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
+
+# Copyrighted source material - do not commit. Each user should supply
+# their own licensed copy of the ITE Trip Generation Manual PDF.
+*.pdf
+examples/
+
+# Generated output
+*_summary.xlsx

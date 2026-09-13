@@ -1,0 +1,21 @@
+[project]
+name = "ite-trip-gen-summary"
+version = "0.1.0"
+description = "Scrapes the ITE Trip Generation Manual PDF into a summary spreadsheet with average-vs-equation recommendations"
+readme = "README.md"
+authors = [
+    { name = "Jon Wilkey", email = "jon.wilkey@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "click>=8.5.0",
+    "openpyxl>=3.1.5",
+    "pymupdf>=1.28.2",
+]
+
+[project.scripts]
+ite-trip-gen-summary = "ite_trip_gen_summary:main"
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"
