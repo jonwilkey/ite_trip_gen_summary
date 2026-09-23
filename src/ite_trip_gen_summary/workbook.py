@@ -60,7 +60,9 @@ _DEFAULT_WIDTHS = {
     "Recommended Method": 18,
 }
 
-_HIGHLIGHT_FILL = PatternFill(fgColor="FF92D050", fill_type="solid")
+# Conditional-format (dxf) solid fills take their color from bgColor in Excel;
+# an fgColor-only fill renders in Google Sheets but is invisible in Excel.
+_HIGHLIGHT_FILL = PatternFill(bgColor="FF92D050", fill_type="solid")
 
 
 def _write_header(ws: Worksheet) -> None:
